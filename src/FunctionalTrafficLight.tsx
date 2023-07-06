@@ -7,13 +7,14 @@ type Colors = {
   [key: string]: string;
 };
 
+const nextColor: Colors = {
+  red: "yellow",
+  yellow: "green",
+  green: "red",
+};
+
 export const FunctionalTrafficLight = () => {
   const [color, colorSetter] = useState("red");
-  const nextColor: Colors = {
-    red: "yellow",
-    yellow: "green",
-    green: "red",
-  };
 
   const colorFilter = (filter: string) => (color === filter ? filter : "black");
 
